@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Adam-Dong"><title>工作日报（2018.01.08） · 宁 静 以 致 远</title><meta name="description" content="Keep：今日完成了哪些工作
+1.fixed AI-886  bug and posted to STE test.
+2.关闭AI-1115，修改少量代码，并提交新PR AI-1115-DB
+3.从代码逻辑分析 AI-1059，是否会产生（但无法复现该bug，并在JIRA上写下备忘，指导测试人员在下"><meta name="keywords"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">宁 静 以 致 远</a></h3></div></div><ul class="social-links"></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai </a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/about">关于</a></li><li><a href="/archives">归档</a></li><li><a href="/links">友链</a></li></div><div class="information"><div class="back_btn"><li><a onclick="window.history.go(-1)" class="fa fa-chevron-left"> </a></li></div><div class="avatar"><img></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>工作日报（2018.01.08）</a></h3></div><div class="post-content"><h4 id="Keep：今日完成了哪些工作"><a href="#Keep：今日完成了哪些工作" class="headerlink" title="Keep：今日完成了哪些工作"></a>Keep：今日完成了哪些工作</h4><ul>
+<li>1.fixed AI-886  bug and posted to STE test.</li>
+<li>2.关闭AI-1115，修改少量代码，并提交新PR AI-1115-DB</li>
+<li>3.从代码逻辑分析 AI-1059，是否会产生<br>（但无法复现该bug，并在<a href="https://helioglobal.atlassian.net/secure/RapidBoard.jspa?rapidView=4&amp;projectKey=AI&amp;view=planning&amp;selectedIssue=AI-1059&amp;quickFilter=7" target="_blank" rel="noopener">JIRA</a>上写下备忘，指导测试人员在下次遇到该问题时分析问题）</li>
+</ul>
+<h4 id="Problem：遇到了什么问题？"><a href="#Problem：遇到了什么问题？" class="headerlink" title="Problem：遇到了什么问题？"></a>Problem：遇到了什么问题？</h4><ul>
+<li>AI-1059 从代码上无法分析出问题关键，唯一的可能性是在autolaunch时，rx_CameraConnected 会被赋值两次，生成两次通知，但是STE报告情况是app已经启动的情况下拔插camera出现的，与此情况不同.</li>
+</ul>
+<h4 id="Try：准备尝试哪些措施"><a href="#Try：准备尝试哪些措施" class="headerlink" title="Try：准备尝试哪些措施"></a>Try：准备尝试哪些措施</h4><ul>
+<li>AI-1059<ul>
+<li>尝试多次赋值 cameraMangaer.rx_CameraConnected 看是否会复现bug</li>
+<li>尝试多次调用show方法,看是否会出现故障</li>
+</ul>
+<hr>
+以上措施均无bug产生，故排除重复调用引发的问题</li>
+</ul>
+<h4 id="今日未完"><a href="#今日未完" class="headerlink" title="今日未完"></a>今日未完</h4><ul>
+<li>无</li>
+</ul>
+<h4 id="Plan：明日的任务"><a href="#Plan：明日的任务" class="headerlink" title="Plan：明日的任务"></a>Plan：明日的任务</h4><ul>
+<li>分析 AI-973问题</li>
+<li>寻找分享会内容</li>
+</ul>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2018-01-08</span><i class="fa fa-tag"></i><a href="/tags/工作日报/" title="工作日报" class="tag">工作日报 </a></div></div></div></div><div class="share"><div class="evernote"><a href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank" class="fa fa-bookmark"></a></div><div class="weibo"><a href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));" class="fa fa-weibo"></a></div><div class="twitter"><a href="http://twitter.com/home?status=,https://adam.github.io/2018/01/08/工作日报（2018-01-08）/,宁 静 以 致 远,工作日报（2018.01.08）,;" class="fa fa-twitter"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a role="navigation" href="/2017/12/22/堆栈与队列/" title="堆栈与队列" class="btn">下一篇</a></li></ul></div></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
