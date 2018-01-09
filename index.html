@@ -323,32 +323,17 @@
 
       
         
-          
-            <h4 id="Keep：今日完成了哪些工作"><a href="#Keep：今日完成了哪些工作" class="headerlink" title="Keep：今日完成了哪些工作"></a>Keep：今日完成了哪些工作</h4><ul>
+          <h4 id="Keep：今日完成了哪些工作"><a href="#Keep：今日完成了哪些工作" class="headerlink" title="Keep：今日完成了哪些工作"></a>Keep：今日完成了哪些工作</h4><ul>
 <li>1.fixed AI-886  bug and posted to STE test.</li>
 <li>2.关闭AI-1115，修改少量代码，并提交新PR AI-1115-DB</li>
-<li>3.从代码逻辑分析 AI-1059，是否会产生<br>（但无法复现该bug，并在<a href="https://helioglobal.atlassian.net/secure/RapidBoard.jspa?rapidView=4&amp;projectKey=AI&amp;view=planning&amp;selectedIssue=AI-1059&amp;quickFilter=7" target="_blank" rel="noopener">JIRA</a>上写下备忘，指导测试人员在下次遇到该问题时分析问题）</li>
-</ul>
-<h4 id="Problem：遇到了什么问题？"><a href="#Problem：遇到了什么问题？" class="headerlink" title="Problem：遇到了什么问题？"></a>Problem：遇到了什么问题？</h4><ul>
-<li>AI-1059 从代码上无法分析出问题关键，唯一的可能性是在autolaunch时，rx_CameraConnected 会被赋值两次，生成两次通知，但是STE报告情况是app已经启动的情况下拔插camera出现的，与此情况不同.</li>
-</ul>
-<h4 id="Try：准备尝试哪些措施"><a href="#Try：准备尝试哪些措施" class="headerlink" title="Try：准备尝试哪些措施"></a>Try：准备尝试哪些措施</h4><ul>
-<li>AI-1059<ul>
-<li>尝试多次赋值 cameraMangaer.rx_CameraConnected 看是否会复现bug</li>
-<li>尝试多次调用show方法,看是否会出现故障</li>
-</ul>
-<hr>
-以上措施均无bug产生，故排除重复调用引发的问题</li>
-</ul>
-<h4 id="今日未完"><a href="#今日未完" class="headerlink" title="今日未完"></a>今日未完</h4><ul>
-<li>无</li>
-</ul>
-<h4 id="Plan：明日的任务"><a href="#Plan：明日的任务" class="headerlink" title="Plan：明日的任务"></a>Plan：明日的任务</h4><ul>
-<li>分析 AI-973问题</li>
-<li>寻找分享会内容</li>
-</ul>
-
-          
+<li>3.从代码逻辑分析 AI-1059，是否会产生<br>（但无法复现该bug，并在<a href="https://helioglobal.atlassian.net/secure/RapidBoard.jspa?rapidView=4&amp;projectKey=AI&amp;view=planning&amp;selectedIssue=AI-1059&amp;quickFilter=7" target="_blank" rel="noopener">JIRA</a>上写下备忘，指导测试人员在下次遇到该问题时分析问题）
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/08/工作日报（2018-01-08）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -476,17 +461,15 @@
 
       
         
-          
-            <h3 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h3><p>堆栈是一种，简单的，基础的数据结构，用处广泛，是学习算法的基础知识</p>
-<p>堆栈与数组相似，但有一些限制，先入栈的元素后出栈  LIFO （last-in first-out）<br>堆栈有三种基本操作 压栈（push） 弹栈（pop） 得到栈顶元素（peek）</p>
-<h4 id="下面是在swift中实现堆栈的方法"><a href="#下面是在swift中实现堆栈的方法" class="headerlink" title="下面是在swift中实现堆栈的方法"></a>下面是在swift中实现堆栈的方法</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// swift 实现堆栈</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Stack</span>&lt;<span class="title">Element</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> array = [<span class="type">Element</span>]()</span><br><span class="line">    <span class="comment">// mutating 关键字允许方法修改struct和enum的变量</span></span><br><span class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">push</span><span class="params">(<span class="number">_</span> new:Element)</span></span> &#123;</span><br><span class="line">        array.append(new)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">pop</span><span class="params">()</span></span> -&gt; <span class="type">Element</span>? &#123;</span><br><span class="line">        <span class="keyword">return</span> array.popLast()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">peek</span><span class="params">()</span></span> -&gt; <span class="type">Element</span>? &#123;</span><br><span class="line">        <span class="keyword">return</span> array.last</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">isEmpty</span><span class="params">()</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> array.isEmpty</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">count</span><span class="params">()</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> array.<span class="built_in">count</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="下面拓展是用来格式化输出堆栈"><a href="#下面拓展是用来格式化输出堆栈" class="headerlink" title="下面拓展是用来格式化输出堆栈"></a>下面拓展是用来格式化输出堆栈</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Stack</span> : <span class="title">CustomStringConvertible</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> description: <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> head = <span class="string">"---Stack---\n"</span></span><br><span class="line">        <span class="comment">// 先用map方法把数组对象转换成可视化字符串，在用reversed反转数据，joined加入换行符</span></span><br><span class="line">        <span class="keyword">let</span> body = array.<span class="built_in">map</span> &#123; <span class="string">"<span class="subst">\($<span class="number">0</span>)</span>"</span> &#125;.reversed().joined(separator: <span class="string">"\n"</span>)</span><br><span class="line">        <span class="keyword">let</span> foot = <span class="string">"\n-----------\n"</span></span><br><span class="line">        <span class="keyword">return</span> head + body + foot</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><a href="https://www.raywenderlich.com/149213/swift-algorithm-club-swift-stack-data-structure" target="_blank" rel="noopener">Swift Algorithm Club: Swift Stack Data Structure</a></p>
-</blockquote>
-<h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><p>队列的基本操作是入队（enqueue）和出队 （dequeue）</p>
-
-          
+          <h3 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h3><p>堆栈是一种，简单的，基础的数据结构，用处广泛，是学习算法的基础知识</p>
+<p>堆栈与数组相似，但有一些限制，先入栈的元素后出栈  LIFO （last-in first-out）<br>堆栈有三种基本操作 压栈（push） 弹栈（pop） 得到栈顶元素（peek）<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/22/堆栈与队列/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -614,15 +597,15 @@
 
       
         
-          
-            <hr>
-<h4 id="今天开始学习-raywenderlich-中-Swift-Algorithm-Club-中的内容"><a href="#今天开始学习-raywenderlich-中-Swift-Algorithm-Club-中的内容" class="headerlink" title="今天开始学习 raywenderlich 中 Swift Algorithm Club 中的内容"></a>今天开始学习 raywenderlich 中 Swift Algorithm Club 中的内容</h4><p>Important links<br>开始，先了解一些算法的基础知识</p>
-<p> <a href="https://github.com/raywenderlich/swift-algorithm-club/blob/master/What%20are%20Algorithms.markdown" target="_blank" rel="noopener">What are algorithms and data structures? Pancakes!</a><br>文章使用 Pancakes（煎饼）的制作过程来描绘了算法，数据，数据结构分别是什么</p>
-<p>时间复杂度划分<br><a href="https://github.com/raywenderlich/swift-algorithm-club/blob/master/Big-O%20Notation.markdown" target="_blank" rel="noopener">Big-O notation</a></p>
-<p>#对数是对求幂的逆运算   y = log(a) x</p>
-<h4 id="如何开始"><a href="#如何开始" class="headerlink" title="如何开始"></a>如何开始</h4><p>stack（堆栈） </p>
-
-          
+          <h4 id="今天开始学习-raywenderlich-中-Swift-Algorithm-Club-中的内容"><a href="#今天开始学习-raywenderlich-中-Swift-Algorithm-Club-中的内容" class="headerlink" title="今天开始学习 raywenderlich 中 Swift Algorithm Club 中的内容"></a>今天开始学习 raywenderlich 中 Swift Algorithm Club 中的内容</h4><p>Important links<br>开始，先了解一些算法的基础知识</p>
+<p> <a href="https://github.com/raywenderlich/swift-algorithm-club/blob/master/What%20are%20Algorithms.markdown" target="_blank" rel="noopener">What are algorithms and data structures? Pancakes!</a><br>文章使用 Pancakes（煎饼）的制作过程来描绘了算法，数据，数据结构分别是什么<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/19/Swift数据结构与算法基础/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -750,50 +733,17 @@
 
       
         
-          
-            <ul>
+          <ul>
 <li><a href="https://www.raywenderlich.com/150073/ios-unit-testing-and-ui-testing-tutorial" target="_blank" rel="noopener">iOS Unit Testing and UI Testing Tutorial</a> -raywenderlich</li>
 <li><a href="http://www.cocoachina.com/ios/20170718/19930.html" target="_blank" rel="noopener">iOS 单元测试和UI测试教程</a> - cocoachina翻译版</li>
-<li>Demo :  <a href="https://github.com/Adam-Dong/iOS-Unit-Testing-and-UI-Testing-Tutorial" target="_blank" rel="noopener">iOS Unit Testing and UI Testing Tutorial</a></li>
-</ul>
-<hr>
-<h3 id="什么是测试？"><a href="#什么是测试？" class="headerlink" title="什么是测试？"></a>什么是测试？</h3><p>在编写测试之前，首先需要知道：你应该测试什么？如果你的目标是修改一个已有的 App，你首先应该对准备修改的组件编写测试。<br>通常，测试应当包含：</p>
-<ul>
-<li>核心功能：模型类和方法，以及它们和控制器的交互</li>
-<li>最常用的 UI 操作</li>
-<li>边际条件</li>
-<li>bug 修复</li>
-</ul>
-<hr>
-<h3 id="FIRST-原则：测试的最佳实践"><a href="#FIRST-原则：测试的最佳实践" class="headerlink" title="FIRST 原则：测试的最佳实践"></a>FIRST 原则：测试的最佳实践</h3><p>FIRST 是几个单词的缩写，简要描述了有效的单元测试需要什么条件，这些条件包括：</p>
-<ol>
-<li>Fast：测试的<strong>运行速度要快</strong>，这样人们就不介意你运行它们了。</li>
-<li>Independent/Isolated：一个<strong>测试不应当依赖</strong>于另一个测试。</li>
-<li>Repeatable：同一个测试，<strong>每次</strong>都应当<strong>获得相同的结果</strong>。外部数据提供者和并发问题会导致间歇性的出错。</li>
-<li>Self-validating：测试应当是<strong>完全自动化</strong>的，输出结果要么是 pass 要么是 fail，而不是依靠程序员对日志文件的解释。</li>
-<li>Timely：理想情况下，测试的编写，应当在编写要测试的产品代码之前。(<strong>先于产品代码</strong>)</li>
-</ol>
-<p>遵循 FIRST 原则会让你的测试清晰和有用，而不会成为 App 的渊薮。</p>
-<hr>
-<h3 id="单元测试基本操作"><a href="#单元测试基本操作" class="headerlink" title="单元测试基本操作"></a>单元测试基本操作</h3><ul>
-<li>创建Unit Test Target</li>
-<li><p>编写测试代码 （SUT：被测系统 System Under Test）</p>
-<ol>
-<li>在 setup() 中创建 SUT，在 tearDown() 中释放 SUT</li>
-<li>测试方法的名字总是以 test 开头，后面加上一个对测试内容的描述。</li>
-<li>将测试方法分成 given、when 和 then 三个部分是一种好的做法：</li>
-</ol>
-</li>
-<li><p>点击运行测试方法</p>
-</li>
-</ul>
-<hr>
-<h3 id="Using-XCTAssert-to-Test-Models"><a href="#Using-XCTAssert-to-Test-Models" class="headerlink" title="Using XCTAssert to Test Models"></a>Using XCTAssert to Test Models</h3><p>见 <a href="https://github.com/Adam-Dong/iOS-Unit-Testing-and-UI-Testing-Tutorial/blob/master/BullsEye/BullsEyeTests/BullsEyeTests.swift）" target="_blank" rel="noopener">BullsEyeTests.Swift</a><br>    <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. <span class="keyword">import</span></span><br><span class="line"><span class="meta">@testable</span> <span class="keyword">import</span> BullsEye</span><br><span class="line"><span class="number">2</span>. setUp and tearDown</span><br><span class="line">setUp() &#123;</span><br><span class="line">    gameUnderTest = <span class="type">BullsEyeGame</span>()</span><br><span class="line">&#125;</span><br><span class="line">tearDown() &#123;</span><br><span class="line">    gameUnderTest = <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="number">3</span>. given/when/then</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">testScoreIsComputed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// 1. given</span></span><br><span class="line">    <span class="keyword">let</span> guess = gameUnderTest.targetValue + <span class="number">5</span></span><br><span class="line">    <span class="comment">// 2. when</span></span><br><span class="line">    <span class="number">_</span> = gameUnderTest.check(guess: guess)</span><br><span class="line">    <span class="comment">// 3. then</span></span><br><span class="line">    <span class="type">XCTAssertEqual</span>(gameUnderTest.scoreRound, <span class="number">95</span>, <span class="string">"Score computed from guess is wrong"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<hr>
-<h3 id="在测试中进行-debug"><a href="#在测试中进行-debug" class="headerlink" title="在测试中进行 debug"></a>在测试中进行 debug</h3><p>在断点导航器中，添加一个 Test Failure 断点，这样，当测试方法断言失败时，测试会停止</p>
-<hr>
-<h3 id="用-XCTestExpectation-测试异步操作"><a href="#用-XCTestExpectation-测试异步操作" class="headerlink" title="用 XCTestExpectation 测试异步操作"></a>用 XCTestExpectation 测试异步操作</h3>
-          
+<li>Demo :  <a href="https://github.com/Adam-Dong/iOS-Unit-Testing-and-UI-Testing-Tutorial" target="_blank" rel="noopener">iOS Unit Testing and UI Testing Tutorial</a>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/18/单元测试和UI测试教程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -840,7 +790,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://adam.github.io/2017/12/11/Test/">
+    <link itemprop="mainEntityOfPage" href="https://adam.github.io/2017/12/11/使用 hexo 免费搭建个人博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Adam">
@@ -859,7 +809,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/11/Test/" itemprop="url">使用 hexo 免费搭建个人博客</a></h1>
+                <a class="post-title-link" href="/2017/12/11/使用 hexo 免费搭建个人博客/" itemprop="url">使用 hexo 免费搭建个人博客</a></h1>
         
 
         <div class="post-meta">
@@ -889,7 +839,7 @@
 
           
           
-             <span id="/2017/12/11/Test/" class="leancloud_visitors" data-flag-title="使用 hexo 免费搭建个人博客">
+             <span id="/2017/12/11/使用 hexo 免费搭建个人博客/" class="leancloud_visitors" data-flag-title="使用 hexo 免费搭建个人博客">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -921,43 +871,15 @@
 
       
         
-          
-            <h6 id="今天尝试用-hexo-github-搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！"><a href="#今天尝试用-hexo-github-搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！" class="headerlink" title="今天尝试用 hexo + github 搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！"></a>今天尝试用 hexo + github 搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！</h6><p>什么是 <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a> ？<br>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<p>Markdown 又是什么呢？<br>Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。<br>有点类似 HTML 都是一种标记语言,就像是把我们平时使用word中的段落,字体大小,超链接等抽象成了固定的符号</p>
-<p>比如:  在 word 中的添加超链接 需要选中文字后点击右键，找到超链接选项，再添加一个网址就可以了<br>在Markdown中，你只需要  [百度] (www.baidu.com) 就可以指定 百度这个两个字为一个超链接</p>
-<h3 id="下面来说说如何安装-Hexo"><a href="#下面来说说如何安装-Hexo" class="headerlink" title="下面来说说如何安装 Hexo"></a>下面来说说如何安装 Hexo</h3><pre><code>安装 Hexo 分为以下三步
-* 安装 Git
-* 安装 Node.js
-* 安装 Hexo
-</code></pre><h5 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h5><p>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：</p>
-<ul>
-<li>Node.js</li>
-<li>Git</li>
-</ul>
-<p>如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
-<p><code>$ npm install -g hexo-cli</code></p>
-<p>如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。</p>
-<h5 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h5><ul>
-<li>Windows：下载并安装 git.</li>
-<li>Mac：使用 Homebrew, MacPorts ：<code>brew install git</code>;或下载 安装程序 安装。</li>
-<li>Linux (Ubuntu, Debian)：<code>sudo apt-get install git-core</code></li>
-<li>Linux (Fedora, Red Hat, CentOS)：<code>sudo yum install git-core</code></li>
-</ul>
-<p>Mac 一般自带git 可以通过在 Terminal 中输入 <code>git version</code>来查看版本号，如果返回版本号说明已经安装，显示 <code>command not found</code> 说明没有安装过</p>
-<h5 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h5><p>安装 Node.js 的最佳方式是使用 nvm。</p>
-<p>cURL:<br><code>$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh</code><br>Wget:<br><code>$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</code><br>安装完成后，重启终端并执行下列命令即可安装 Node.js。<br><code>$ nvm install stable</code><br>或者您也可以下载 安装程序 来安装。</p>
-<h5 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h5><p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p>
-<p><code>$ npm install -g hexo-cli</code></p>
-<h3 id="安装完-Hexo-以后就可以开始制作自己的blog了"><a href="#安装完-Hexo-以后就可以开始制作自己的blog了" class="headerlink" title="安装完 Hexo 以后就可以开始制作自己的blog了"></a>安装完 Hexo 以后就可以开始制作自己的blog了</h3><pre><code>制作blog站点分为以下三步
-* 创建本地Hexo站点
-* 创建gitHub仓库
-* 部署本地Hexo到github仓库
-
-{% blockquote [author[, source]] [link] [source_link_title] %}
-    content
-    {% endblockquote %}
-</code></pre>
-          
+          <h6 id="今天尝试用-hexo-github-搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！"><a href="#今天尝试用-hexo-github-搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！" class="headerlink" title="今天尝试用 hexo + github 搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！"></a>今天尝试用 hexo + github 搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！</h6><p>什么是 <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a> ？<br>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p>Markdown 又是什么呢？<br>Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/11/使用 hexo 免费搭建个人博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1085,18 +1007,14 @@
 
       
         
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/11/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1192,10 +1110,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 

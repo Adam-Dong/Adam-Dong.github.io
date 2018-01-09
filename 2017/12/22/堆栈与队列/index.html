@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="堆栈堆栈是一种，简单的，基础的数据结构，用处广泛，是学习算法的基础知识 堆栈与数组相似，但有一些限制，先入栈的元素后出栈  LIFO （last-in first-out）堆栈有三种基本操作 压栈（push） 弹栈（pop） 得到栈顶元素（peek） 下面是在swift中实现堆栈的方法123456789101112131415161718192021222324// swift 实现堆栈struc">
+<meta name="description" content="堆栈堆栈是一种，简单的，基础的数据结构，用处广泛，是学习算法的基础知识 堆栈与数组相似，但有一些限制，先入栈的元素后出栈  LIFO （last-in first-out）堆栈有三种基本操作 压栈（push） 弹栈（pop） 得到栈顶元素（peek）">
 <meta name="keywords" content="算法基础,堆栈,队列">
 <meta property="og:type" content="article">
 <meta property="og:title" content="堆栈与队列">
 <meta property="og:url" content="https://adam.github.io/2017/12/22/堆栈与队列/index.html">
 <meta property="og:site_name" content="宁 静 以 致 远">
-<meta property="og:description" content="堆栈堆栈是一种，简单的，基础的数据结构，用处广泛，是学习算法的基础知识 堆栈与数组相似，但有一些限制，先入栈的元素后出栈  LIFO （last-in first-out）堆栈有三种基本操作 压栈（push） 弹栈（pop） 得到栈顶元素（peek） 下面是在swift中实现堆栈的方法123456789101112131415161718192021222324// swift 实现堆栈struc">
+<meta property="og:description" content="堆栈堆栈是一种，简单的，基础的数据结构，用处广泛，是学习算法的基础知识 堆栈与数组相似，但有一些限制，先入栈的元素后出栈  LIFO （last-in first-out）堆栈有三种基本操作 压栈（push） 弹栈（pop） 得到栈顶元素（peek）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-22T07:11:10.976Z">
+<meta property="og:updated_time" content="2018-01-09T08:57:21.652Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="堆栈与队列">
-<meta name="twitter:description" content="堆栈堆栈是一种，简单的，基础的数据结构，用处广泛，是学习算法的基础知识 堆栈与数组相似，但有一些限制，先入栈的元素后出栈  LIFO （last-in first-out）堆栈有三种基本操作 压栈（push） 弹栈（pop） 得到栈顶元素（peek） 下面是在swift中实现堆栈的方法123456789101112131415161718192021222324// swift 实现堆栈struc">
+<meta name="twitter:description" content="堆栈堆栈是一种，简单的，基础的数据结构，用处广泛，是学习算法的基础知识 堆栈与数组相似，但有一些限制，先入栈的元素后出栈  LIFO （last-in first-out）堆栈有三种基本操作 压栈（push） 弹栈（pop） 得到栈顶元素（peek）">
 
 
 
@@ -322,7 +322,7 @@
 
       
         <h3 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h3><p>堆栈是一种，简单的，基础的数据结构，用处广泛，是学习算法的基础知识</p>
-<p>堆栈与数组相似，但有一些限制，先入栈的元素后出栈  LIFO （last-in first-out）<br>堆栈有三种基本操作 压栈（push） 弹栈（pop） 得到栈顶元素（peek）</p>
+<p>堆栈与数组相似，但有一些限制，先入栈的元素后出栈  LIFO （last-in first-out）<br>堆栈有三种基本操作 压栈（push） 弹栈（pop） 得到栈顶元素（peek）<br><a id="more"></a></p>
 <h4 id="下面是在swift中实现堆栈的方法"><a href="#下面是在swift中实现堆栈的方法" class="headerlink" title="下面是在swift中实现堆栈的方法"></a>下面是在swift中实现堆栈的方法</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// swift 实现堆栈</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Stack</span>&lt;<span class="title">Element</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> array = [<span class="type">Element</span>]()</span><br><span class="line">    <span class="comment">// mutating 关键字允许方法修改struct和enum的变量</span></span><br><span class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">push</span><span class="params">(<span class="number">_</span> new:Element)</span></span> &#123;</span><br><span class="line">        array.append(new)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">pop</span><span class="params">()</span></span> -&gt; <span class="type">Element</span>? &#123;</span><br><span class="line">        <span class="keyword">return</span> array.popLast()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">peek</span><span class="params">()</span></span> -&gt; <span class="type">Element</span>? &#123;</span><br><span class="line">        <span class="keyword">return</span> array.last</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">isEmpty</span><span class="params">()</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> array.isEmpty</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">count</span><span class="params">()</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> array.<span class="built_in">count</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="下面拓展是用来格式化输出堆栈"><a href="#下面拓展是用来格式化输出堆栈" class="headerlink" title="下面拓展是用来格式化输出堆栈"></a>下面拓展是用来格式化输出堆栈</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Stack</span> : <span class="title">CustomStringConvertible</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> description: <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> head = <span class="string">"---Stack---\n"</span></span><br><span class="line">        <span class="comment">// 先用map方法把数组对象转换成可视化字符串，在用reversed反转数据，joined加入换行符</span></span><br><span class="line">        <span class="keyword">let</span> body = array.<span class="built_in">map</span> &#123; <span class="string">"<span class="subst">\($<span class="number">0</span>)</span>"</span> &#125;.reversed().joined(separator: <span class="string">"\n"</span>)</span><br><span class="line">        <span class="keyword">let</span> foot = <span class="string">"\n-----------\n"</span></span><br><span class="line">        <span class="keyword">return</span> head + body + foot</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -473,10 +473,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
