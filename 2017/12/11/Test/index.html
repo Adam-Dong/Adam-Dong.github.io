@@ -1,5 +1,316 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Adam-Dong"><title>使用 hexo 免费搭建个人博客 · 宁 静 以 致 远</title><meta name="description" content="今天尝试用 hexo + github 搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！什么是 Hexo ？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-Markdown"><meta name="keywords"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">宁 静 以 致 远</a></h3></div></div><ul class="social-links"></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai </a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/about">关于</a></li><li><a href="/archives">归档</a></li><li><a href="/links">友链</a></li></div><div class="information"><div class="back_btn"><li><a onclick="window.history.go(-1)" class="fa fa-chevron-left"> </a></li></div><div class="avatar"><img></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>使用 hexo 免费搭建个人博客</a></h3></div><div class="post-content"><h6 id="今天尝试用-hexo-github-搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！"><a href="#今天尝试用-hexo-github-搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！" class="headerlink" title="今天尝试用 hexo + github 搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！"></a>今天尝试用 hexo + github 搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！</h6><p>什么是 <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a> ？<br>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo,个人博客,Pesonal blog,Blog," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="今天尝试用 hexo + github 搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！什么是 Hexo ？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 Markdown 又是什么呢？Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可">
+<meta name="keywords" content="Hexo,个人博客,Pesonal blog,Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 hexo 免费搭建个人博客">
+<meta property="og:url" content="https://adam.github.io/2017/12/11/Test/index.html">
+<meta property="og:site_name" content="宁 静 以 致 远">
+<meta property="og:description" content="今天尝试用 hexo + github 搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！什么是 Hexo ？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 Markdown 又是什么呢？Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-11T09:38:04.725Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用 hexo 免费搭建个人博客">
+<meta name="twitter:description" content="今天尝试用 hexo + github 搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！什么是 Hexo ？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 Markdown 又是什么呢？Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://adam.github.io/2017/12/11/Test/"/>
+
+
+
+
+
+  <title>使用 hexo 免费搭建个人博客 | 宁 静 以 致 远</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">宁 静 以 致 远</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://adam.github.io/2017/12/11/Test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Adam">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/self.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宁 静 以 致 远">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">使用 hexo 免费搭建个人博客</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-11T09:59:51+08:00">
+                2017-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h6 id="今天尝试用-hexo-github-搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！"><a href="#今天尝试用-hexo-github-搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！" class="headerlink" title="今天尝试用 hexo + github 搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！"></a>今天尝试用 hexo + github 搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！</h6><p>什么是 <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a> ？<br>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <p>Markdown 又是什么呢？<br>Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。<br>有点类似 HTML 都是一种标记语言,就像是把我们平时使用word中的段落,字体大小,超链接等抽象成了固定的符号</p>
 <p>比如:  在 word 中的添加超链接 需要选中文字后点击右键，找到超链接选项，再添加一个网址就可以了<br>在Markdown中，你只需要  [百度] (www.baidu.com) 就可以指定 百度这个两个字为一个超链接</p>
 <h3 id="下面来说说如何安装-Hexo"><a href="#下面来说说如何安装-Hexo" class="headerlink" title="下面来说说如何安装 Hexo"></a>下面来说说如何安装 Hexo</h3><pre><code>安装 Hexo 分为以下三步
@@ -33,4 +344,394 @@ Markdown"><meta name="keywords"><meta content="width=device-width, initial-scale
 {% blockquote [author[, source]] [link] [source_link_title] %}
     content
     {% endblockquote %}
-</code></pre></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-12-11</span><i class="fa fa-tag"></i><a href="/tags/Hexo/" title="Hexo" class="tag">Hexo </a><a href="/tags/个人博客/" title="个人博客" class="tag">个人博客 </a><a href="/tags/Pesonal-blog/" title="Pesonal blog" class="tag">Pesonal blog </a><a href="/tags/Blog/" title="Blog" class="tag">Blog </a></div></div></div></div><div class="share"><div class="evernote"><a href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank" class="fa fa-bookmark"></a></div><div class="weibo"><a href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));" class="fa fa-weibo"></a></div><div class="twitter"><a href="http://twitter.com/home?status=,https://adam.github.io/2017/12/11/Test/,宁 静 以 致 远,使用 hexo 免费搭建个人博客,;" class="fa fa-twitter"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a role="navigation" href="/2017/12/18/单元测试和UI测试教程/" title="iOS单元测试和UI测试教程" class="btn">上一篇</a></li><li class="next pagbuttons"><a role="navigation" href="/2017/12/11/hello-world/" title="Hello World" class="btn">下一篇</a></li></ul></div></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/个人博客/" rel="tag"># 个人博客</a>
+          
+            <a href="/tags/Pesonal-blog/" rel="tag"># Pesonal blog</a>
+          
+            <a href="/tags/Blog/" rel="tag"># Blog</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/11/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/18/单元测试和UI测试教程/" rel="prev" title="iOS单元测试和UI测试教程">
+                iOS单元测试和UI测试教程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/self.png"
+                alt="Adam" />
+            
+              <p class="site-author-name" itemprop="name">Adam</p>
+              <p class="site-description motion-element" itemprop="description">We choose to go to the moon in this decade and do the other things,not because they are easy, but because they are hard.      -- John F. Kennedy, 1962</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#今天尝试用-hexo-github-搭建一个个人博客，制作简单，主题丰富，而且是免费的，如果有兴趣的不妨试一试！"><span class="nav-number">1.</span> <span class="nav-text"><a href="#&#x4ECA;&#x5929;&#x5C1D;&#x8BD5;&#x7528;-hexo-github-&#x642D;&#x5EFA;&#x4E00;&#x4E2A;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#xFF0C;&#x5236;&#x4F5C;&#x7B80;&#x5355;&#xFF0C;&#x4E3B;&#x9898;&#x4E30;&#x5BCC;&#xFF0C;&#x800C;&#x4E14;&#x662F;&#x514D;&#x8D39;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5174;&#x8DA3;&#x7684;&#x4E0D;&#x59A8;&#x8BD5;&#x4E00;&#x8BD5;&#xFF01;" class="headerlink" title="&#x4ECA;&#x5929;&#x5C1D;&#x8BD5;&#x7528; hexo + github &#x642D;&#x5EFA;&#x4E00;&#x4E2A;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#xFF0C;&#x5236;&#x4F5C;&#x7B80;&#x5355;&#xFF0C;&#x4E3B;&#x9898;&#x4E30;&#x5BCC;&#xFF0C;&#x800C;&#x4E14;&#x662F;&#x514D;&#x8D39;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5174;&#x8DA3;&#x7684;&#x4E0D;&#x59A8;&#x8BD5;&#x4E00;&#x8BD5;&#xFF01;"></a>&#x4ECA;&#x5929;&#x5C1D;&#x8BD5;&#x7528; hexo + github &#x642D;&#x5EFA;&#x4E00;&#x4E2A;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#xFF0C;&#x5236;&#x4F5C;&#x7B80;&#x5355;&#xFF0C;&#x4E3B;&#x9898;&#x4E30;&#x5BCC;&#xFF0C;&#x800C;&#x4E14;&#x662F;&#x514D;&#x8D39;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5174;&#x8DA3;&#x7684;&#x4E0D;&#x59A8;&#x8BD5;&#x4E00;&#x8BD5;&#xFF01;</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下面来说说如何安装-Hexo"><span class="nav-number"></span> <span class="nav-text"><a href="#&#x4E0B;&#x9762;&#x6765;&#x8BF4;&#x8BF4;&#x5982;&#x4F55;&#x5B89;&#x88C5;-Hexo" class="headerlink" title="&#x4E0B;&#x9762;&#x6765;&#x8BF4;&#x8BF4;&#x5982;&#x4F55;&#x5B89;&#x88C5; Hexo"></a>&#x4E0B;&#x9762;&#x6765;&#x8BF4;&#x8BF4;&#x5982;&#x4F55;&#x5B89;&#x88C5; Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装前提"><span class="nav-number"></span> <span class="nav-text"><a href="#&#x5B89;&#x88C5;&#x524D;&#x63D0;" class="headerlink" title="&#x5B89;&#x88C5;&#x524D;&#x63D0;"></a>&#x5B89;&#x88C5;&#x524D;&#x63D0;</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装-Git"><span class="nav-number"></span> <span class="nav-text"><a href="#&#x5B89;&#x88C5;-Git" class="headerlink" title="&#x5B89;&#x88C5; Git"></a>&#x5B89;&#x88C5; Git</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装-Node-js"><span class="nav-number"></span> <span class="nav-text"><a href="#&#x5B89;&#x88C5;-Node-js" class="headerlink" title="&#x5B89;&#x88C5; Node.js"></a>&#x5B89;&#x88C5; Node.js</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装-Hexo"><span class="nav-number"></span> <span class="nav-text"><a href="#&#x5B89;&#x88C5;-Hexo" class="headerlink" title="&#x5B89;&#x88C5; Hexo"></a>&#x5B89;&#x88C5; Hexo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装完-Hexo-以后就可以开始制作自己的blog了"><span class="nav-number"></span> <span class="nav-text"><a href="#&#x5B89;&#x88C5;&#x5B8C;-Hexo-&#x4EE5;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5236;&#x4F5C;&#x81EA;&#x5DF1;&#x7684;blog&#x4E86;" class="headerlink" title="&#x5B89;&#x88C5;&#x5B8C; Hexo &#x4EE5;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5236;&#x4F5C;&#x81EA;&#x5DF1;&#x7684;blog&#x4E86;"></a>&#x5B89;&#x88C5;&#x5B8C; Hexo &#x4EE5;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5236;&#x4F5C;&#x81EA;&#x5DF1;&#x7684;blog&#x4E86;</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Adam</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
